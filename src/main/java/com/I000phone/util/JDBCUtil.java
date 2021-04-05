@@ -23,8 +23,7 @@ public class JDBCUtil {
         String runMode = ResourceManagerUtil.runMode.name().toLowerCase();
         try {
             String path = runMode + File.separator + CommonConstant.DBCP_CONN_FILE_NAME;
-            System.out.println(path);
-            InputStream inputStream = JDBCUtil.class.getClassLoader().getResourceAsStream("F:\\myspark\\mtbap\\src\\main\\resources\\local\\jdbc-config.properties");
+            InputStream inputStream = JDBCUtil.class.getClassLoader().getResourceAsStream(path);
             properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();

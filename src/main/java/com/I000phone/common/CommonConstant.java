@@ -7,7 +7,7 @@ public interface CommonConstant {
     // 共同配置文件名
     String COMMON_CONFIG_FILE_NAME = "config.properties";
     // JDBC 连接池
-    String DBCP_CONN_FILE_NAME = "jdbc.config.properties";
+    String DBCP_CONN_FILE_NAME = "jdbc-config.properties";
     // 结果DB 连接相关参数
     String URL = "url";
     String USER_NAME = "username";
