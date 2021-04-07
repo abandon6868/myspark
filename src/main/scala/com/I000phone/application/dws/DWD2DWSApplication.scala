@@ -22,8 +22,6 @@ object DWD2DWSApplication {
     if ("".equals(targetDate)){
       targetDate = yesterday
     }
-    println(DWDSql.LOAD_ODS_USER_2_DWD.replace(yesterday, targetDate))
-    System.exit(-1)
 
     spark.sql(DWDSql.LOAD_ODS_USER_2_DWD.replace(yesterday, targetDate))
     spark.sql(DWDSql.LOAD_ODS_USER_EXTEND_2_DWD.replace(yesterday, targetDate))

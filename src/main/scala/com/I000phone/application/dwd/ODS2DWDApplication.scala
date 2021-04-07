@@ -23,8 +23,6 @@ object ODS2DWDApplication {
       targetDate = yesterday
     }
 
-//    println(DWDSql.LOAD_ODS_USER_2_DWD.replace(yesterday, targetDate))
-//    System.exit(-1)
     spark.sql(DWDSql.LOAD_ODS_USER_2_DWD.replace(yesterday, targetDate))
     spark.sql(DWDSql.LOAD_ODS_USER_EXTEND_2_DWD.replace(yesterday, targetDate))
     spark.sql(DWDSql.LOAD_ODS_BIZ_TRADE_2_DWD.replace(yesterday, targetDate))
